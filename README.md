@@ -1,4 +1,4 @@
-# testautomatisering
+# testautomation
 
 template project exploring the possibilities of combining of guice, junit and cucumber
 
