@@ -10,6 +10,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Part of ultra simple Car application
+ */
 public class JdbcCarDao implements CarDao {
 
     @Inject

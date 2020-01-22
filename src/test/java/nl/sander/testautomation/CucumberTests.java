@@ -4,6 +4,9 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
+/**
+ * Example CucumberRunner
+ */
 @RunWith(Cucumber.class)
 @CucumberOptions(
         strict = true,

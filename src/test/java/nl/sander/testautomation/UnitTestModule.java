@@ -8,7 +8,7 @@ import org.reflections.util.ClasspathHelper;
 import org.reflections.util.ConfigurationBuilder;
 
 /**
- * mocks all classes in the SUT
+ * Mocks all classes in the SUT.
  *
  * Works but could be optimized by only searching for types/annotations
  */

@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * Part of ultra simple Car application
+ */
 public class Database {
 
     private final Connection connection;

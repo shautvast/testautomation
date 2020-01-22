@@ -2,6 +2,9 @@ package nl.sander.testautomation.cars;
 
 import java.util.Objects;
 
+/**
+ * Part of ultra simple Car application
+ */
 public class Car {
 
     private long id;

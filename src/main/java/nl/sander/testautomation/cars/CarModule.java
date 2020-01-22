@@ -2,6 +2,9 @@ package nl.sander.testautomation.cars;
 
 import com.google.inject.AbstractModule;
 
+/**
+ * Part of ultra simple Car application
+ */
 public class CarModule extends AbstractModule {
 
     @Override

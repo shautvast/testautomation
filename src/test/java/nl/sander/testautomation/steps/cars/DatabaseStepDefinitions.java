@@ -22,6 +22,9 @@ import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertTrue;
 
+/**
+ * Example stepdefinitions for our car application
+ */
 public class DatabaseStepDefinitions implements En {
 
     private CarDao carDao;
@@ -41,13 +44,14 @@ public class DatabaseStepDefinitions implements En {
         });
 
         Then("^a new car is added to the inventory$", (DataTable dataTable) -> {
-            Map<Long, Car> carRecordsById = this.carDao.getAllCars().stream().collect(Collectors.toMap(Car::getId, Function.identity()));
-            dataTable.asMaps().stream()
-                    .map(record -> Long.parseLong(record.get("id")))
-                    .forEach(carId -> {
-                        assertTrue(String.format("car with id %s not found", carId), carRecordsById.containsKey(carId));
-                    });
-
+            if (StepDefinitions.testMode == Mode.DATABASE_INTEGRATION_TEST) {
+                Map<Long, Car> carRecordsById = this.carDao.getAllCars().stream().collect(Collectors.toMap(Car::getId, Function.identity()));
+                dataTable.asMaps().stream()
+                        .map(record -> Long.parseLong(record.get("id")))
+                        .forEach(carId -> {
+                            assertTrue(String.format("car with id %s not found", carId), carRecordsById.containsKey(carId));
+                        });
+            }
         });
     }
 

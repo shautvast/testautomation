@@ -4,6 +4,9 @@ package nl.sander.testautomation.steps;
 import io.cucumber.java.Before;
 import nl.sander.testautomation.Mode;
 
+/**
+ * Common stepdefinitions. Used to derive behavior from tags
+ */
 public class StepDefinitions {
 
     public static Mode testMode;

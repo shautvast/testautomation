@@ -4,6 +4,9 @@ import javax.inject.Inject;
 import java.sql.SQLException;
 import java.util.Optional;
 
+/**
+ * Part of ultra simple Car application
+ */
 public class CarService {
 
     @Inject
